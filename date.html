@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <script>
+    window.onload = oppstart;
+
+
+    function oppstart() {
+
+      var na = new Date();
+      var da = new Date(1995, 04 - 1, 05);
+
+      document.getElementById("dato1").innerHTML = na;
+      document.getElementById("dato2").innerHTML = da;
+
+      var ar = na.getFullYear() - da.getFullYear();
+
+      if(na.getMonth() < da.getMonth()) {
+        ar--;
+      }
+      else if (na.getMonth() === da.getMonth() && na.getDay() < da.getDay()) {
+        ar--;
+      }
+
+
+      document.getElementById("alder").innerHTML = ar;
+    }
+
+
+    </script>
+  </head>
+  <body>
+    <p id="dato1"></p>
+    <p id="dato2"></p>
+    <p id="alder"></p>
+
+  </body>
+
+</html>
